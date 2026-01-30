@@ -1,4 +1,5 @@
 
+import Link from 'next/link';
 import React from 'react';
 
 const About: React.FC = () => {
@@ -31,9 +32,9 @@ const About: React.FC = () => {
             Our approach is built on the foundations of consistency, scalability, and modern architectural principles applied to the digital world.
           </p>
 
-          <button className="bg-[#ff5e14] text-white px-12 py-5 font-black text-xs uppercase tracking-[0.2em] hover:bg-[#e04d0d] transition-all">
+          <Link href={'/software-architecture'} className="bg-[#ff5e14] text-white px-12 py-5 font-black text-xs uppercase tracking-[0.2em] hover:bg-[#e04d0d] transition-all">
             Read More
-          </button>
+          </Link>
         </div>
       </div>
     </section>

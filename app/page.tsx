@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Header from "./components/Header";
 import About from "./components/About";
@@ -11,7 +12,6 @@ import Team from "./components/Team";
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden">
-      <Header />
       <main className="flex-grow">
         <Hero />
         <About />
@@ -20,7 +20,6 @@ export default function Home() {
         <Team />
         <Contact />
       </main>
-      <Footer />
     </div>
   );
 }
