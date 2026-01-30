@@ -14,12 +14,12 @@ const Header: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About Us', href: '#aboutus' },
-    { name: 'Products', href: '#products' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Team', href: '#team' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/#home' },
+    { name: 'About Us', href: '/#aboutus' },
+    { name: 'Products', href: '/#products' },
+    { name: 'Portfolio', href: '/#portfolio' },
+    { name: 'Team', href: '/#team' },
+    { name: 'Contact', href: '/#contact' },
   ];
 
   return (
