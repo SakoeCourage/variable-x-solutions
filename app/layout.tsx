@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Home",
-  description: "About Variable X Solutions",
+  title: "VariableXSolutions",
+  description: "Welcom to VariableX Solutions",
 };
 
 export default function RootLayout({
