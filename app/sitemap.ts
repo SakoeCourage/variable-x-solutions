@@ -5,6 +5,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: "https://www.variablexsolutions.com",
       lastModified: new Date(),
-    }
+    },
+    {
+        url: "https://www.variablexsolutions.com/software-architecture",
+        lastModified: new Date(),
+      },
   ];
 }
