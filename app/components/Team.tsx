@@ -8,7 +8,7 @@ const Team: React.FC = () => {
     { name: "Mr Kwesi Adabo Boagye", role: "CEO", image: "/thumbnails/team/1.png" },
     { name: "Sakoe Courage", role: "Senior Developer", image: "/thumbnails/team/2.png" },
     { name: "Adusei Theophilus", role: "Senior Developer", image: "/thumbnails/team/3.png" },
-    { name: "Kudjo Ewusi Mensah", role: "Mobile App Developer", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400" }
+    { name: "Kudjo Ewusi Mensah", role: "Mobile App Developer", image: "https://images.unsplash.com/vector-1742875355318-00d715aec3e8?q=50&w=680&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }
   ];
 
   return (
