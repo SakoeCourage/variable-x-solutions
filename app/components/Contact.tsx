@@ -39,6 +39,31 @@ const Contact: React.FC = () => {
 
   const resetForm = () => setStatus('idle');
 
+  const handleSubmitNew = (e: any) => {
+    e.preventDefault();
+    
+    // Validate form fields
+    if (!form.name || !form.email || !form.message) {
+      setStatus('error');
+      return;
+    }
+    
+    // Create mailto URL with pre-filled data
+    const subject = encodeURIComponent(`New Contact Request from ${form.name}`);
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}\n\n---\nSent from VariableX Solutions contact form`
+    );
+    
+    const mailtoUrl = `mailto:info@variablexsolutions.com?subject=${subject}&body=${body}`;
+    
+    // Open user's default email client
+    window.location.href = mailtoUrl;
+    
+    // // Show success message
+    // setStatus("success");
+    setForm({ name: "", email: "", message: "" });
+  };
+
   return (
     <section id="contact" className="py-32 bg-[#002147] relative overflow-hidden">
       <div className="absolute top-0 right-0 p-20">
@@ -101,7 +126,7 @@ const Contact: React.FC = () => {
                   <button onClick={resetForm} className="bg-[#ff5e14] text-white px-8 py-4 font-black text-xs uppercase tracking-[0.2em]">Try Again</button>
                 </div>
               ) : (
-                <form className="space-y-6" onSubmit={handleSubmit}>
+                <form className="space-y-6" onSubmit={handleSubmitNew}>
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Name</label>
