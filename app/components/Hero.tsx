@@ -23,8 +23,8 @@ const Hero: React.FC = () => {
                 SOFTWARE
               </span>
               <h1 className="text-4xl md:text-7xl font-black text-[#002147] leading-[1.25] tracking-wider uppercase">
-                WE BUILD USABLE<br />
-                SOFTWARES SOLUTIONS
+                We Build Usable<br />
+                Software Solutions
               </h1>
             </div>
           </ScrollReveal>

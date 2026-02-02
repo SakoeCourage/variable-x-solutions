@@ -7,20 +7,35 @@ type FormStatus = 'idle' | 'loading' | 'success' | 'error';
 
 const Contact: React.FC = () => {
   const [status, setStatus] = useState<FormStatus>('idle');
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  const handleSubmit = async (e: React.FormEvent) => {
+
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-    setStatus('loading');
+    setStatus("loading");
 
-    setTimeout(() => {
-      const isSuccess = Math.random() > 0.1;
-      if (isSuccess) {
-        setStatus('success');
-      } else {
-        setStatus('error');
-      }
-    }, 2000);
+    try {
+      const res = await fetch("/api/contact-us", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) throw new Error("Failed");
+
+      setStatus("success");
+      setForm({ name: "", email: "", message: "" });
+    } catch (err) {
+      setStatus("error");
+    }
   };
+
 
   const resetForm = () => setStatus('idle');
 
@@ -29,7 +44,7 @@ const Contact: React.FC = () => {
       <div className="absolute top-0 right-0 p-20">
         <span className="outline-text-white text-[150px] opacity-10 block pointer-events-none uppercase">CONNECT</span>
       </div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-20">
           <ScrollReveal>
@@ -40,7 +55,7 @@ const Contact: React.FC = () => {
               <p className="text-blue-100/60 text-lg mb-12 max-w-md">
                 We're ready to engineer your digital success. Reach out to our team of experts today for usable software solutions.
               </p>
-              
+
               <div className="space-y-10">
                 <div className="flex gap-6 items-center">
                   <div className="w-16 h-16 bg-[#ff5e14] flex items-center justify-center text-white">
@@ -51,7 +66,7 @@ const Contact: React.FC = () => {
                     <a href="mailto:info@variablexsolutions.com" className="text-xl font-black text-white hover:text-[#ff5e14] transition-colors">info@variablexsolutions.com</a>
                   </div>
                 </div>
-                
+
                 <div className="flex gap-6 items-center">
                   <div className="w-16 h-16 border-2 border-white/20 flex items-center justify-center text-white">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /></svg>
@@ -90,18 +105,28 @@ const Contact: React.FC = () => {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
                       <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Name</label>
-                      <input required disabled={status === 'loading'} type="text" className="w-full bg-gray-50 border-b-2 border-gray-100 px-0 py-3 focus:border-[#ff5e14] focus:outline-none transition-colors" />
+                      <input
+                        value={form.name}
+                        onChange={(e) => setForm({ ...form, name: e.target.value })}
+                        required disabled={status === 'loading'} type="text" className="w-full text-gray-500 px-2 bg-gray-50 border-b-2 border-gray-100  py-3 focus:border-[#ff5e14] focus:outline-none transition-colors" />
+
                     </div>
                     <div className="space-y-2">
                       <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Email</label>
-                      <input required disabled={status === 'loading'} type="email" className="w-full bg-gray-50 border-b-2 border-gray-100 px-0 py-3 focus:border-[#ff5e14] focus:outline-none transition-colors" />
+                      <input
+                        value={form.email}
+                        onChange={(e) => setForm({ ...form, email: e.target.value })}
+                        required disabled={status === 'loading'} type="email" className="w-full text-gray-500 px-2 bg-gray-50 border-b-2 border-gray-100  py-3 focus:border-[#ff5e14] focus:outline-none transition-colors" />
                     </div>
                   </div>
                   <div className="space-y-2">
                     <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest">Message</label>
-                    <textarea required disabled={status === 'loading'} rows={4} className="w-full bg-gray-50 border-b-2 border-gray-100 px-0 py-3 focus:border-[#ff5e14] focus:outline-none transition-colors resize-none"></textarea>
+                    <textarea
+                      value={form.message}
+                      onChange={(e) => setForm({ ...form, message: e.target.value })}
+                      required disabled={status === 'loading'} rows={4} className="w-full text-gray-500 px-2 bg-gray-50 border-b-2 border-gray-100  py-3 focus:border-[#ff5e14] focus:outline-none transition-colors resize-none"></textarea>
                   </div>
-                  <button 
+                  <button
                     type="submit"
                     disabled={status === 'loading'}
                     className="bg-[#ff5e14] text-white w-full py-6 font-black text-xs uppercase tracking-[0.3em] hover:bg-[#e04d0d] transition-all flex items-center justify-center gap-3 disabled:bg-gray-400"

@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="pt-12 border-t border-white/5 flex flex-col md:row justify-between items-center text-[11px] font-black text-blue-100/20 uppercase tracking-[0.2em]">
-          <span>&copy; {new Date().getFullYear()} Variable X Solutions.</span>
+          <span>&copy; 2024 Variable X Solutions.</span>
           <span>Designed with Tech Excellence</span>
         </div>
       </div>

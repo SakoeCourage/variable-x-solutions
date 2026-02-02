@@ -9,45 +9,56 @@ const Portfolio: React.FC = () => {
 
   const projects: Project[] = [
     {
-      title: "Nexus HR Enterprise",
-      category: "Web App",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-      description: "A comprehensive payroll and attendance system for multi-national firms.",
-      tech: ["React", "Node.js", "PostgreSQL"]
-    },
-    {
-      title: "SwiftPay Wallet",
-      category: "Mobile",
-      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
-      description: "High-security digital wallet for peer-to-peer transfers and utility payments.",
-      tech: ["React Native", "Firebase", "Stripe"]
-    },
-    {
-      title: "LogiTrack AI",
+      title: "Leave Management System",
       category: "HR",
-      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800",
-      description: "AI-driven supply chain management dashboard with real-time tracking.",
-      tech: ["Python", "AWS", "Vue.js"]
+      image: "https://images.unsplash.com/vector-1738323940227-d06e040032c4?q=80&w=1074?auto=format&fit=crop&q=80&w=800",
+      description: "A centralized leave management system for tracking requests, approvals, and balances across organizations.",
+      tech: ["Svelte", "ASP.NET Core", "SQL Server"]
     },
     {
-      title: "EcoStore Platform",
+      title: "HR Planning System",
+      category: "HR",
+      image: "https://images.unsplash.com/vector-1738323940293-4991bd5229c3?auto=format&fit=crop&q=80&w=800",
+      description: "Workforce planning and forecasting platform to support hiring, promotions, and organizational growth.",
+      tech: ["Svelte", "ASP.NET Core", "SQL Server"]
+    },
+    {
+      title: "Attendance Management System",
+      category: "HR",
+      image: "https://images.unsplash.com/vector-1746131656873-212124783782?auto=format&fit=crop&q=80&w=800",
+      description: "Real-time attendance tracking system with reporting, shift management, and audit trails.",
+      tech: ["Svelte", "ASP.NET Core", "SQL Server"]
+    },
+    {
+      title: "Payroll Management System",
+      category: "Finance",
+      image: "https://images.unsplash.com/vector-1740027867842-a63038cb9429?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description: "Automated payroll system handling salaries, deductions, taxes, and compliance for organizations.",
+      tech: ["Svelte", "ASP.NET Core", "SQL Server"]
+    },
+    {
+      title: "Item Inventory & POS System",
       category: "E-commerce",
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=800",
-      description: "Headless commerce solution optimized for core web vitals and conversions.",
-      tech: ["Next.js", "Shopify API", "Tailwind"]
+      image: "https://images.unsplash.com/vector-1756774242835-7c6e78b223db?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description: "Inventory and POS platform integrated with Shopify Markets for multi-store and multi-currency sales.",
+      tech: ["Laravel", "Shopify API", "Tailwind", "Stripe"]
     },
     {
-      title: "Skyline Analytics",
-      category: "Big Data",
-      image: "https://images.unsplash.com/photo-1551288049-bbda64626744?auto=format&fit=crop&q=80&w=800",
-      description: "Data visualization tool for real-estate market trends and predictions.",
-      tech: ["D3.js", "TypeScript", "Go"]
+      title: "Poultry Farm House Management System",
+      category: "Agriculture",
+      image: "https://images.unsplash.com/vector-1753854003835-75dcb12b7776?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description: "Farm management system that helps poultry farmers track feeding, mortality, egg production, and sales.",
+      tech: ["React", "Laravel", "MongoDB"]
     }
   ];
 
+
+
+
+
   const filters = ['All', 'Web App', 'Mobile', 'HR',];
-  const filteredProjects = activeFilter === 'All' 
-    ? projects 
+  const filteredProjects = activeFilter === 'All'
+    ? projects
     : projects.filter(p => p.category === activeFilter);
 
   return (
@@ -65,17 +76,16 @@ const Portfolio: React.FC = () => {
                 Featured<br />Portfolio
               </h2>
             </div>
-            
+
             <div className="flex flex-wrap gap-4">
               {filters.map(filter => (
                 <button
                   key={filter}
                   onClick={() => setActiveFilter(filter)}
-                  className={`px-6 py-2 text-[10px] font-black uppercase tracking-widest transition-all border-b-2 ${
-                    activeFilter === filter 
-                      ? 'border-[#ff5e14] text-[#ff5e14]' 
+                  className={`px-6 py-2 text-[10px] font-black uppercase tracking-widest transition-all border-b-2 ${activeFilter === filter
+                      ? 'border-[#ff5e14] text-[#ff5e14]'
                       : 'border-transparent text-gray-400 hover:text-[#002147]'
-                  }`}
+                    }`}
                 >
                   {filter}
                 </button>
@@ -89,13 +99,13 @@ const Portfolio: React.FC = () => {
             <ScrollReveal key={idx}>
               <div className="group relative bg-white overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 h-full">
                 <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
+                  <img
+                    src={project.image}
+                    alt={project.title}
                     className="w-full h-full object-cover grayscale-[30%] group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700"
                   />
                 </div>
-                
+
                 <div className="p-8">
                   <div className="flex justify-between items-start mb-4">
                     <span className="text-[9px] font-black text-[#ff5e14] uppercase tracking-widest">{project.category}</span>
@@ -109,7 +119,7 @@ const Portfolio: React.FC = () => {
                   <p className="text-gray-500 text-sm leading-relaxed mb-6">
                     {project.description}
                   </p>
-                  <div className="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-[#002147] group-hover:translate-x-2 transition-transform cursor-pointer">
+                  <div className="flex items-center opacity-0 gap-2 text-[10px] font-black uppercase tracking-widest text-[#002147] group-hover:translate-x-2 transition-transform cursor-pointer">
                     View Project <span className="text-[#ff5e14] text-lg leading-none">→</span>
                   </div>
                 </div>

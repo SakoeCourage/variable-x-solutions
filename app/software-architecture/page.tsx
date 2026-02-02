@@ -8,6 +8,8 @@ interface SoftwareDetailsProps {
   onBack: () => void;
 }
 
+
+
 const Page: React.FC<SoftwareDetailsProps> = ({ onBack }) => {
   return (
     <div className="bg-white">

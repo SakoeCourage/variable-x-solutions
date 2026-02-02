@@ -3,13 +3,14 @@ import Link from 'next/link';
 import React from 'react';
 
 const About: React.FC = () => {
+
   return (
     <section id="aboutus" className="py-32 bg-[#f4f7f9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-20">
         <div className="lg:w-1/2">
           <div className="relative">
             <img 
-              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800" 
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
               className="w-full h-[500px] object-cover shadow-2xl" 
               alt="Engineering" 
             />

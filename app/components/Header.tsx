@@ -29,7 +29,7 @@ const Header: React.FC = () => {
         <div className={`hidden lg:flex bg-white border-b border-gray-100 py-2 transition-all duration-300 ${isScrolled ? 'h-0 opacity-0 overflow-hidden' : 'h-auto'}`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex justify-between items-center text-[11px] font-bold text-gray-500 uppercase tracking-wider">
             <div className="flex gap-6">
-              <span className="flex items-center gap-2"><span className="text-[#ff5e14]">+</span>(123) 1234-567-8901</span>
+              <span className="flex items-center gap-2"><span className="text-[#ff5e14]">+</span>(233) 50 000 8001</span>
               <span className="flex items-center gap-2 lowercase"><span className="text-[#ff5e14]">@</span>info@variablexsolutions.com</span>
               <span className="flex items-center gap-2"><span className="text-[#ff5e14]">⌚</span>Mon - Sat 8:00 - 17:30</span>
             </div>
