@@ -52,7 +52,7 @@ const Page: React.FC<SoftwareDetailsProps> = ({ onBack }) => {
                 <div className="text-[#ff5e14] text-5xl font-black">01</div>
                 <h3 className="text-2xl font-black text-[#002147] uppercase tracking-tight">Enterprise Blueprinting</h3>
                 <p className="text-gray-500 leading-relaxed">
-                  We don't just write code; we engineer systems. Our process begins with a deep structural analysis of your business logic, ensuring that every line of code serves a strategic purpose. We build foundations that handle heavy loads and complex integrations seamlessly.
+                  We don&apos;t just write code; we engineer systems. Our process begins with a deep structural analysis of your business logic, ensuring that every line of code serves a strategic purpose. We build foundations that handle heavy loads and complex integrations seamlessly.
                 </p>
                 <ul className="space-y-3 text-sm font-bold text-[#002147]/70 uppercase tracking-widest">
                   <li>• System Integration</li>
@@ -130,7 +130,7 @@ const Page: React.FC<SoftwareDetailsProps> = ({ onBack }) => {
           <ScrollReveal>
             <h2 className="text-5xl font-black text-[#002147] uppercase tracking-tighter mb-8 leading-none">Ready to start building?</h2>
             <p className="text-gray-500 text-xl mb-12">
-              Let's discuss the architectural requirements for your next software project. Our team is ready to deliver a solution that stands the test of time.
+              Let&apos;s discuss the architectural requirements for your next software project. Our team is ready to deliver a solution that stands the test of time.
             </p>
             <Link 
               href="/#contact"
