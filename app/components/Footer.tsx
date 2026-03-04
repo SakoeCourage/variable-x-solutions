@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-20">
           <div>
-            <div className="bg-[#ff5e14] inline-flex flex-col items-center px-8 py-4 mb-8">
+            <div className="bg-[#00b4cc] inline-flex flex-col items-center px-8 py-4 mb-8">
               <span className="text-xl font-black tracking-tighter leading-none">VARIABLE X</span>
               <span className="text-white text-[6px] font-black tracking-[0.5em] uppercase mt-1.5 -mr-[0.5em]">Solutions</span>
             </div>
@@ -17,19 +17,19 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h4 className="text-xs font-black uppercase tracking-[0.3em] text-[#ff5e14] mb-8">Navigation</h4>
+            <h4 className="text-xs font-black uppercase tracking-[0.3em] text-[#00b4cc] mb-8">Navigation</h4>
             <div className="grid grid-cols-2 gap-4">
               {['Home', 'About Us', 'Products', 'Portfolio', 'Team', 'Contact'].map(link => (
-                <a key={link} href={`#${link.toLowerCase().replace(' ', '')}`} className="text-sm font-bold text-white hover:text-[#ff5e14] transition-colors">{link}</a>
+                <a key={link} href={`#${link.toLowerCase().replace(' ', '')}`} className="text-sm font-bold text-white hover:text-[#00b4cc] transition-colors">{link}</a>
               ))}
             </div>
           </div>
           
           <div>
-            <h4 className="text-xs font-black uppercase tracking-[0.3em] text-[#ff5e14] mb-8">Social Media</h4>
+            <h4 className="text-xs font-black uppercase tracking-[0.3em] text-[#00b4cc] mb-8">Social Media</h4>
             <div className="flex gap-4">
               {['f', 't', 'i', 'p', 'l'].map(s => (
-                <span key={s} className="w-10 h-10 border border-white/10 flex items-center justify-center text-sm font-black hover:bg-[#ff5e14] hover:border-[#ff5e14] transition-all cursor-pointer uppercase">{s}</span>
+                <span key={s} className="w-10 h-10 border border-white/10 flex items-center justify-center text-sm font-black hover:bg-[#00b4cc] hover:border-[#00b4cc] transition-all cursor-pointer uppercase">{s}</span>
               ))}
             </div>
           </div>

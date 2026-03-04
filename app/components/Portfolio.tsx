@@ -83,7 +83,7 @@ const Portfolio: React.FC = () => {
                   key={filter}
                   onClick={() => setActiveFilter(filter)}
                   className={`px-6 py-2 text-[10px] font-black uppercase tracking-widest transition-all border-b-2 ${activeFilter === filter
-                      ? 'border-[#ff5e14] text-[#ff5e14]'
+                      ? 'border-[#00b4cc] text-[#00b4cc]'
                       : 'border-transparent text-gray-400 hover:text-[#002147]'
                     }`}
                 >
@@ -108,24 +108,24 @@ const Portfolio: React.FC = () => {
 
                 <div className="p-8">
                   <div className="flex justify-between items-start mb-4">
-                    <span className="text-[9px] font-black text-[#ff5e14] uppercase tracking-widest">{project.category}</span>
+                    <span className="text-[9px] font-black text-[#00b4cc] uppercase tracking-widest">{project.category}</span>
                     <div className="flex gap-2">
                       {project.tech.slice(0, 2).map(t => (
                         <span key={t} className="text-[8px] font-bold bg-gray-100 text-gray-500 px-2 py-0.5 rounded uppercase tracking-tighter">{t}</span>
                       ))}
                     </div>
                   </div>
-                  <h3 className="text-xl font-black text-[#002147] uppercase mb-4 group-hover:text-[#ff5e14] transition-colors">{project.title}</h3>
+                  <h3 className="text-xl font-black text-[#002147] uppercase mb-4 group-hover:text-[#00b4cc] transition-colors">{project.title}</h3>
                   <p className="text-gray-500 text-sm leading-relaxed mb-6">
                     {project.description}
                   </p>
                   <div className="flex items-center opacity-0 gap-2 text-[10px] font-black uppercase tracking-widest text-[#002147] group-hover:translate-x-2 transition-transform cursor-pointer">
-                    View Project <span className="text-[#ff5e14] text-lg leading-none">→</span>
+                    View Project <span className="text-[#00b4cc] text-lg leading-none">→</span>
                   </div>
                 </div>
 
                 {/* Decorative side accent */}
-                <div className="absolute top-0 left-0 w-1 h-0 bg-[#ff5e14] group-hover:h-full transition-all duration-500"></div>
+                <div className="absolute top-0 left-0 w-1 h-0 bg-[#00b4cc] group-hover:h-full transition-all duration-500"></div>
               </div>
             </ScrollReveal>
           ))}

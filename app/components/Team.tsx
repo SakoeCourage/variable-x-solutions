@@ -32,8 +32,8 @@ const Team: React.FC = () => {
                   <img src={m.image} alt={m.name} className="w-full bg-white h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100" />
                 </div>
                 <div className="p-8 absolute bottom-0 left-0 w-full bg-gradient-to-t from-[#002147] to-transparent">
-                  <h3 className="text-white text-lg font-black uppercase tracking-tight mb-1 group-hover:text-[#ff5e14] transition-colors">{m.name}</h3>
-                  <p className="text-[#ff5e14] text-[10px] font-black uppercase tracking-[0.2em]">{m.role}</p>
+                  <h3 className="text-white text-lg font-black uppercase tracking-tight mb-1 group-hover:text-[#00b4cc] transition-colors">{m.name}</h3>
+                  <p className="text-[#00b4cc] text-[10px] font-black uppercase tracking-[0.2em]">{m.role}</p>
                 </div>
               </div>
             </ScrollReveal>

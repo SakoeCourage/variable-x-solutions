@@ -29,12 +29,12 @@ const Header: React.FC = () => {
         <div className={`hidden lg:flex bg-white border-b border-gray-100 py-2 transition-all duration-300 ${isScrolled ? 'h-0 opacity-0 overflow-hidden' : 'h-auto'}`}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex justify-between items-center text-[11px] font-bold text-gray-500 uppercase tracking-wider">
             <div className="flex gap-6">
-              <span className="flex items-center gap-2"><span className="text-[#ff5e14]">+</span>(233) 50 000 8001</span>
-              <span className="flex items-center gap-2 lowercase"><span className="text-[#ff5e14]">@</span>info@variablexsolutions.com</span>
-              <span className="flex items-center gap-2"><span className="text-[#ff5e14]">⌚</span>Mon - Sat 8:00 - 17:30</span>
+              <span className="flex items-center gap-2"><span className="text-[#00b4cc]">+</span>(233) 50 000 8001</span>
+              <span className="flex items-center gap-2 lowercase"><span className="text-[#00b4cc]">@</span>info@variablexsolutions.com</span>
+              <span className="flex items-center gap-2"><span className="text-[#00b4cc]">⌚</span>Mon - Sat 8:00 - 17:30</span>
             </div>
             <div className="flex gap-4">
-              <span className="text-[#ff5e14] cursor-default tracking-[0.3em]">VXS</span>
+              <span className="text-[#00b4cc] cursor-default tracking-[0.3em]">VXS</span>
             </div>
           </div>
         </div>
@@ -44,17 +44,16 @@ const Header: React.FC = () => {
           <div className="max-w-7xl mx-auto flex items-stretch justify-between">
             <div className="flex items-center">
               {/* Logo Container - Responsive Sizing */}
-              <div className="bg-[#ff5e14] px-6 py-4 md:px-10 md:py-6 flex flex-col items-center justify-center min-h-[60px] md:min-h-[80px]">
-                <span className="text-white text-lg md:text-2xl font-black tracking-tighter leading-none">VARIABLE X</span>
-                <span className="text-white text-[5px] md:text-[7px] font-black tracking-[0.5em] md:tracking-[0.6em] uppercase mt-1 -mr-[0.5em] md:-mr-[0.6em]">Solutions</span>
+              <div className=" px-6 py-4 md:px-10 md:py-6 flex flex-col items-center justify-center min-h-[60px] md:min-h-[80px]">
+                <img src="/thumbnails/logo/vxlogo.png" alt="vx-logo" className="w-20 lg:w-30" />
               </div>
               
-              <div className="hidden lg:flex items-center h-full ml-8 gap-8">
+              <div className="hidden lg:flex items-center h-full ml-8 gap-8 mr-auto">
                 {navLinks.map((item) => (
                   <a
                     key={item.name}
                     href={item.href}
-                    className="text-[13px] font-extrabold text-[#002147] uppercase tracking-widest hover:text-[#ff5e14] transition-colors h-full flex items-center"
+                    className="text-[13px] font-extrabold text-[#002147] uppercase tracking-widest hover:text-[#00b4cc] transition-colors h-full flex items-center"
                   >
                     {item.name}
                   </a>
@@ -65,7 +64,7 @@ const Header: React.FC = () => {
             <div className="flex items-center pr-4 gap-6">
               <button 
                 onClick={() => setIsMenuOpen(true)}
-                className="bg-[#002147] lg:hidden p-3 text-white hover:bg-[#ff5e14] transition-colors"
+                className="bg-[#002147] lg:hidden p-3 text-white hover:bg-[#00b4cc] transition-colors"
                 aria-label="Open Menu"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -89,7 +88,7 @@ const Header: React.FC = () => {
             </div>
             <button 
               onClick={() => setIsMenuOpen(false)}
-              className="p-2 text-white hover:text-[#ff5e14] transition-colors"
+              className="p-2 text-white hover:text-[#00b4cc] transition-colors"
               aria-label="Close Menu"
             >
               <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -104,7 +103,7 @@ const Header: React.FC = () => {
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-3xl font-black text-white uppercase tracking-tighter hover:text-[#ff5e14] transition-colors"
+                className="text-3xl font-black text-white uppercase tracking-tighter hover:text-[#00b4cc] transition-colors"
               >
                 {link.name}
               </a>

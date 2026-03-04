@@ -28,7 +28,7 @@ const Page: React.FC<SoftwareDetailsProps> = ({ onBack }) => {
             <h1 className="text-4xl md:text-7xl font-black text-white uppercase tracking-tighter leading-none mb-6">
               Full Software<br />Architectures
             </h1>
-            <div className="w-24 h-1 bg-[#ff5e14] mx-auto"></div>
+            <div className="w-24 h-1 bg-[#00b4cc] mx-auto"></div>
           </ScrollReveal>
         </div>
       </section>
@@ -37,7 +37,7 @@ const Page: React.FC<SoftwareDetailsProps> = ({ onBack }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <Link 
           href={'/'}
-          className="group flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.3em] text-gray-400 hover:text-[#ff5e14] transition-colors"
+          className="group flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.3em] text-gray-400 hover:text-[#00b4cc] transition-colors"
         >
           <span className="group-hover:-translate-x-2 transition-transform">←</span> Back to Home
         </Link>
@@ -49,7 +49,7 @@ const Page: React.FC<SoftwareDetailsProps> = ({ onBack }) => {
           <div className="grid lg:grid-cols-3 gap-16">
             <ScrollReveal>
               <div className="space-y-6">
-                <div className="text-[#ff5e14] text-5xl font-black">01</div>
+                <div className="text-[#00b4cc] text-5xl font-black">01</div>
                 <h3 className="text-2xl font-black text-[#002147] uppercase tracking-tight">Enterprise Blueprinting</h3>
                 <p className="text-gray-500 leading-relaxed">
                   We don&apos;t just write code; we engineer systems. Our process begins with a deep structural analysis of your business logic, ensuring that every line of code serves a strategic purpose. We build foundations that handle heavy loads and complex integrations seamlessly.
@@ -64,7 +64,7 @@ const Page: React.FC<SoftwareDetailsProps> = ({ onBack }) => {
 
             <ScrollReveal>
               <div className="space-y-6">
-                <div className="text-[#ff5e14] text-5xl font-black">02</div>
+                <div className="text-[#00b4cc] text-5xl font-black">02</div>
                 <h3 className="text-2xl font-black text-[#002147] uppercase tracking-tight">Precision Construction</h3>
                 <p className="text-gray-500 leading-relaxed">
                   Using a modular approach inspired by modern architecture, we build software components that are reusable, maintainable, and highly efficient. Our tech stack is selected for performance, ensuring your solution is fast today and ready for tomorrow.
@@ -79,7 +79,7 @@ const Page: React.FC<SoftwareDetailsProps> = ({ onBack }) => {
 
             <ScrollReveal>
               <div className="space-y-6">
-                <div className="text-[#ff5e14] text-5xl font-black">03</div>
+                <div className="text-[#00b4cc] text-5xl font-black">03</div>
                 <h3 className="text-2xl font-black text-[#002147] uppercase tracking-tight">Human-Centric UX</h3>
                 <p className="text-gray-500 leading-relaxed">
                   A powerful engine needs an intuitive cockpit. We design interfaces that prioritize usability and efficiency. Our UX engineers bridge the gap between complex backend capabilities and simple, productive user experiences.
@@ -114,7 +114,7 @@ const Page: React.FC<SoftwareDetailsProps> = ({ onBack }) => {
             ].map((item, i) => (
               <ScrollReveal key={i}>
                 <div className="border border-white/10 p-10 h-full hover:bg-white/5 transition-colors group">
-                  <div className="text-[#ff5e14] text-4xl font-black mb-6 group-hover:scale-110 transition-transform inline-block">{item.step}</div>
+                  <div className="text-[#00b4cc] text-4xl font-black mb-6 group-hover:scale-110 transition-transform inline-block">{item.step}</div>
                   <h4 className="text-white text-lg font-black uppercase mb-4">{item.title}</h4>
                   <p className="text-blue-100/40 text-sm leading-relaxed">{item.desc}</p>
                 </div>
@@ -134,7 +134,7 @@ const Page: React.FC<SoftwareDetailsProps> = ({ onBack }) => {
             </p>
             <Link 
               href="/#contact"
-              className="bg-[#ff5e14] text-white px-16 py-6 font-black text-sm uppercase tracking-[0.3em] shadow-xl shadow-orange-500/20 hover:-translate-y-1 transition-all"
+              className="bg-[#00b4cc] text-white px-16 py-6 font-black text-sm uppercase tracking-[0.3em] shadow-xl shadow-cyan-500/20 hover:-translate-y-1 transition-all"
             >
               Contact Our Engineers
             </Link>

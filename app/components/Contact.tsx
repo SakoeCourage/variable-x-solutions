@@ -58,9 +58,9 @@ const Contact: React.FC = () => {
     
     // Open user's default email client
     window.location.href = mailtoUrl;
-    
-    // // Show success message
-    // setStatus("success");
+
+    // Show success message
+    setStatus("success");
     setForm({ name: "", email: "", message: "" });
   };
 
@@ -83,12 +83,12 @@ const Contact: React.FC = () => {
 
               <div className="space-y-10">
                 <div className="flex gap-6 items-center">
-                  <div className="w-16 h-16 bg-[#ff5e14] flex items-center justify-center text-white">
+                  <div className="w-16 h-16 bg-[#00b4cc] flex items-center justify-center text-white">
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                   </div>
                   <div>
                     <span className="block text-[10px] font-black text-blue-100/40 uppercase tracking-[0.3em] mb-1">Email Us</span>
-                    <a href="mailto:info@variablexsolutions.com" className="text-xl font-black text-white hover:text-[#ff5e14] transition-colors">info@variablexsolutions.com</a>
+                    <a href="mailto:info@variablexsolutions.com" className="text-xl font-black text-white hover:text-[#00b4cc] transition-colors">info@variablexsolutions.com</a>
                   </div>
                 </div>
 
@@ -114,7 +114,7 @@ const Contact: React.FC = () => {
                   </div>
                   <h3 className="text-2xl font-black text-[#002147] uppercase mb-4">Request Sent!</h3>
                   <p className="text-gray-500 mb-8">Engineering team notified. We will get back to you within 24 hours.</p>
-                  <button onClick={resetForm} className="text-[#ff5e14] font-black text-xs uppercase tracking-widest hover:underline">Send another message</button>
+                  <button onClick={resetForm} className="text-[#00b4cc] font-black text-xs uppercase tracking-widest hover:underline">Send another message</button>
                 </div>
               ) : status === 'error' ? (
                 <div className="text-center animate-fade-in">
@@ -123,7 +123,7 @@ const Contact: React.FC = () => {
                   </div>
                   <h3 className="text-2xl font-black text-[#002147] uppercase mb-4">Oops!</h3>
                   <p className="text-gray-500 mb-8">Transmission failed. Please check your connection and try again.</p>
-                  <button onClick={resetForm} className="bg-[#ff5e14] text-white px-8 py-4 font-black text-xs uppercase tracking-[0.2em]">Try Again</button>
+                  <button onClick={resetForm} className="bg-[#00b4cc] text-white px-8 py-4 font-black text-xs uppercase tracking-[0.2em]">Try Again</button>
                 </div>
               ) : (
                 <form className="space-y-6" onSubmit={handleSubmitNew}>
@@ -133,7 +133,7 @@ const Contact: React.FC = () => {
                       <input
                         value={form.name}
                         onChange={(e) => setForm({ ...form, name: e.target.value })}
-                        required disabled={status === 'loading'} type="text" className="w-full text-gray-500 px-2 bg-gray-50 border-b-2 border-gray-100  py-3 focus:border-[#ff5e14] focus:outline-none transition-colors" />
+                        required disabled={status === 'loading'} type="text" className="w-full text-gray-500 px-2 bg-gray-50 border-b-2 border-gray-100  py-3 focus:border-[#00b4cc] focus:outline-none transition-colors" />
 
                     </div>
                     <div className="space-y-2">
@@ -141,7 +141,7 @@ const Contact: React.FC = () => {
                       <input
                         value={form.email}
                         onChange={(e) => setForm({ ...form, email: e.target.value })}
-                        required disabled={status === 'loading'} type="email" className="w-full text-gray-500 px-2 bg-gray-50 border-b-2 border-gray-100  py-3 focus:border-[#ff5e14] focus:outline-none transition-colors" />
+                        required disabled={status === 'loading'} type="email" className="w-full text-gray-500 px-2 bg-gray-50 border-b-2 border-gray-100  py-3 focus:border-[#00b4cc] focus:outline-none transition-colors" />
                     </div>
                   </div>
                   <div className="space-y-2">
@@ -149,12 +149,12 @@ const Contact: React.FC = () => {
                     <textarea
                       value={form.message}
                       onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      required disabled={status === 'loading'} rows={4} className="w-full text-gray-500 px-2 bg-gray-50 border-b-2 border-gray-100  py-3 focus:border-[#ff5e14] focus:outline-none transition-colors resize-none"></textarea>
+                      required disabled={status === 'loading'} rows={4} className="w-full text-gray-500 px-2 bg-gray-50 border-b-2 border-gray-100  py-3 focus:border-[#00b4cc] focus:outline-none transition-colors resize-none"></textarea>
                   </div>
                   <button
                     type="submit"
                     disabled={status === 'loading'}
-                    className="bg-[#ff5e14] text-white w-full py-6 font-black text-xs uppercase tracking-[0.3em] hover:bg-[#e04d0d] transition-all flex items-center justify-center gap-3 disabled:bg-gray-400"
+                    className="bg-[#00b4cc] text-white w-full py-6 font-black text-xs uppercase tracking-[0.3em] hover:bg-[#0099b0] transition-all flex items-center justify-center gap-3 disabled:bg-gray-400"
                   >
                     {status === 'loading' ? "Sending..." : "Send Request"}
                   </button>

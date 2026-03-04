@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
           
           <ScrollReveal>
             <div className="max-w-3xl mx-auto mb-12">
-              <div className="w-20 h-1 bg-[#ff5e14] mx-auto mb-8"></div>
+              <div className="w-20 h-1 bg-[#00b4cc] mx-auto mb-8"></div>
               <p className="text-gray-700 font-semibold text-xl md:text-2xl leading-relaxed">
                 Constructing modern solutions requires engineering precision. We turn complex business logic into powerful digital tools that scale with your ambitions.
               </p>
@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-6">
               <a 
                 href="#portfolio" 
-                className="bg-[#ff5e14] text-white px-12 py-6 font-black text-sm uppercase tracking-[0.2em] hover:bg-[#e04d0d] transition-all shadow-xl shadow-orange-500/20 hover:-translate-y-1 inline-block text-center"
+                className="bg-[#00b4cc] text-white px-12 py-6 font-black text-sm uppercase tracking-[0.2em] hover:bg-[#0099b0] transition-all shadow-xl shadow-cyan-500/20 hover:-translate-y-1 inline-block text-center"
               >
                 See Our Portfolio
               </a>

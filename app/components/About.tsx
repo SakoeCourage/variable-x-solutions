@@ -14,7 +14,7 @@ const About: React.FC = () => {
               className="w-full h-[500px] object-cover shadow-2xl" 
               alt="Engineering" 
             />
-            <div className="absolute -bottom-10 -right-10 bg-[#ff5e14] p-10 hidden md:block">
+            <div className="absolute -bottom-10 -right-10 bg-[#00b4cc] p-10 hidden md:block">
               <span className="text-white text-5xl font-black leading-none">4+</span>
               <span className="block text-white font-bold text-xs uppercase tracking-widest mt-2">Years of Tech</span>
             </div>
@@ -33,7 +33,7 @@ const About: React.FC = () => {
             Our approach is built on the foundations of consistency, scalability, and modern architectural principles applied to the digital world.
           </p>
 
-          <Link href={'/software-architecture'} className="bg-[#ff5e14] text-white px-12 py-5 font-black text-xs uppercase tracking-[0.2em] hover:bg-[#e04d0d] transition-all">
+          <Link href={'/software-architecture'} className="bg-[#00b4cc] text-white px-12 py-5 font-black text-xs uppercase tracking-[0.2em] hover:bg-[#0099b0] transition-all">
             Read More
           </Link>
         </div>
